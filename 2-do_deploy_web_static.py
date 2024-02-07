@@ -26,5 +26,9 @@ def do_deploy(archive_path):
         run('rm -rf /data/web_static/current')
         run('ln -s {}{}/ /data/web_static/current'.format(path, no_ext))
         return True
+<<<<<<< HEAD
     except Exception as e:
+=======
+    except:
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
         return False

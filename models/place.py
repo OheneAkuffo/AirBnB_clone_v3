@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 
 lds class Place"""
+=======
+#!/usr/bin/python
+""" holds class Place"""
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
 import models
 from models.base_model import BaseModel, Base
 from os import getenv

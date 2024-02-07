@@ -1,10 +1,18 @@
 #!/usr/bin/python3
 """Test BaseModel for expected behavior and documentation"""
+<<<<<<< HEAD
 
 from datetime import datetime
 import inspect
 import models
 import pep8
+=======
+from datetime import datetime
+import inspect
+import models
+import pep8 as pycodestyle
+import time
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
 import unittest
 from unittest import mock
 BaseModel = models.base_model.BaseModel
@@ -24,7 +32,11 @@ class TestBaseModelDocs(unittest.TestCase):
         for path in ['models/base_model.py',
                      'tests/test_models/test_base_model.py']:
             with self.subTest(path=path):
+<<<<<<< HEAD
                 errors = pep8.Checker(path).check_all()
+=======
+                errors = pycodestyle.Checker(path).check_all()
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
                 self.assertEqual(errors, 0)
 
     def test_module_docstring(self):
@@ -82,6 +94,7 @@ class TestBaseModel(unittest.TestCase):
         """Test that two BaseModel instances have different datetime objects
         and that upon creation have identical updated_at and created_at
         value."""
+<<<<<<< HEAD
         tic = datetime.utcnow()
         inst1 = BaseModel()
         toc = datetime.utcnow()
@@ -89,6 +102,16 @@ class TestBaseModel(unittest.TestCase):
         tic = datetime.utcnow()
         inst2 = BaseModel()
         toc = datetime.utcnow()
+=======
+        tic = datetime.now()
+        inst1 = BaseModel()
+        toc = datetime.now()
+        self.assertTrue(tic <= inst1.created_at <= toc)
+        time.sleep(1e-4)
+        tic = datetime.now()
+        inst2 = BaseModel()
+        toc = datetime.now()
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
         self.assertTrue(tic <= inst2.created_at <= toc)
         self.assertEqual(inst1.created_at, inst1.updated_at)
         self.assertEqual(inst2.created_at, inst2.updated_at)

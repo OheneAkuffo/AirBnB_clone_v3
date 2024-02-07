@@ -5,6 +5,11 @@ Contains class BaseModel
 
 from datetime import datetime
 import models
+<<<<<<< HEAD
+=======
+from os import getenv
+import sqlalchemy
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
 from sqlalchemy import Column, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 import uuid

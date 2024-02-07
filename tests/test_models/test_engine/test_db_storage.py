@@ -78,6 +78,7 @@ class TestFileStorage(unittest.TestCase):
     @unittest.skipIf(models.storage_t != 'db', "not testing db storage")
     def test_all_no_class(self):
         """Test that all returns all rows when no class is passed"""
+<<<<<<< HEAD
         self.assertEqual(len(models.storage.all()), 0)
         new_state = State(name="California")
         models.storage.new(new_state)
@@ -87,19 +88,25 @@ class TestFileStorage(unittest.TestCase):
         models.storage.new(new_user)
         models.storage.save()
         self.assertEqual(len(models.storage.all()), 2)
+=======
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
 
     @unittest.skipIf(models.storage_t != 'db', "not testing db storage")
     def test_new(self):
         """test that new adds an object to the database"""
+<<<<<<< HEAD
         current_count = len(models.storage.all())
         new_state = State(name="Neveda")
         models.storage.new(new_state)
         self.assertEqual(current_count + 1, len(models.storage.all()))
         models.storage.save()
+=======
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
 
     @unittest.skipIf(models.storage_t != 'db', "not testing db storage")
     def test_save(self):
         """Test that save properly saves objects to file.json"""
+<<<<<<< HEAD
         current_count = len(models.storage.all())
         new_state = State(name="New York")
         models.storage.new(new_state)
@@ -140,3 +147,5 @@ class TestFileStorage(unittest.TestCase):
         models.storage.save()
         count_all2 = models.storage.count()
         self.assertEqual(count_all + 1, count_all2)
+=======
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f

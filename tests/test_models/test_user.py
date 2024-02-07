@@ -3,6 +3,10 @@
 Contains the TestUserDocs classes
 """
 
+<<<<<<< HEAD
+=======
+from datetime import datetime
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
 import inspect
 import models
 from models import user

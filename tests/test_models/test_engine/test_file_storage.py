@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 ontains the TestFileStorageDocs classes
+=======
+#!/usr/bin/python3
+"""
+Contains the TestFileStorageDocs classes
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
 """
 
 from datetime import datetime
@@ -111,6 +117,7 @@ class TestFileStorage(unittest.TestCase):
         with open("file.json", "r") as f:
             js = f.read()
         self.assertEqual(json.loads(string), json.loads(js))
+<<<<<<< HEAD
 
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")
     def test_get(self):
@@ -139,3 +146,5 @@ class TestFileStorage(unittest.TestCase):
         models.storage.save()
         count_all2 = models.storage.count()
         self.assertEqual(count_all + 1, count_all2)
+=======
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f

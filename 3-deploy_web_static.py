@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 script based on the file 2-do_deploy_web_static.py that creates and
+=======
+#!/usr/bin/python3
+"""
+Fabric script based on the file 2-do_deploy_web_static.py that creates and
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
 distributes an archive to the web servers
 """
 
@@ -17,7 +23,11 @@ def do_pack():
         file_name = "versions/web_static_{}.tgz".format(date)
         local("tar -cvzf {} web_static".format(file_name))
         return file_name
+<<<<<<< HEAD
     except Exception as e:
+=======
+    except:
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
         return None
 
 
@@ -38,7 +48,11 @@ def do_deploy(archive_path):
         run('rm -rf /data/web_static/current')
         run('ln -s {}{}/ /data/web_static/current'.format(path, no_ext))
         return True
+<<<<<<< HEAD
     except Exception as e:
+=======
+    except:
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
         return False
 
 

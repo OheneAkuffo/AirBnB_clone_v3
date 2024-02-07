@@ -3,10 +3,17 @@
 Contains the FileStorage class
 """
 
+<<<<<<< HEAD
 from models.amenity import Amenity
 from models.base_model import BaseModel
 from models.city import City
 import json
+=======
+import json
+from models.amenity import Amenity
+from models.base_model import BaseModel
+from models.city import City
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
 from models.place import Place
 from models.review import Review
 from models.state import State
@@ -55,7 +62,11 @@ class FileStorage:
                 jo = json.load(f)
             for key in jo:
                 self.__objects[key] = classes[jo[key]["__class__"]](**jo[key])
+<<<<<<< HEAD
         except Exception as e:
+=======
+        except:
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
             pass
 
     def delete(self, obj=None):
@@ -68,6 +79,7 @@ class FileStorage:
     def close(self):
         """call reload() method for deserializing the JSON file to objects"""
         self.reload()
+<<<<<<< HEAD
 
     def get(self, cls, id):
         """A method to retrieve one object"""
@@ -81,3 +93,5 @@ class FileStorage:
     def count(self, cls=None):
         """Count the number of objects in storage"""
         return len(self.all(cls))
+=======
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f

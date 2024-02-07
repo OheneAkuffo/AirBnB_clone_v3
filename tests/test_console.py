@@ -4,6 +4,10 @@ Contains the class TestConsoleDocs
 """
 
 import console
+<<<<<<< HEAD
+=======
+import inspect
+>>>>>>> 0e0c3809a0163bc9e78f5689a9145452a504827f
 import pep8
 import unittest
 HBNBCommand = console.HBNBCommand
